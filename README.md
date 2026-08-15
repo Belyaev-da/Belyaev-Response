@@ -1,4 +1,4 @@
-<div align="center">
+<img width="1818" height="728" alt="image" src="https://github.com/user-attachments/assets/9f142b07-5eda-4548-b4d6-86fb0bb8776e" /><div align="center">
 
 # 🛡️ Belyaev Response
 
@@ -8,14 +8,14 @@
 
 [![Chrome / Edge](https://img.shields.io/badge/Browser-Chrome%20%2F%20Edge-4285F4?logo=googlechrome&logoColor=white)](#)
 [![Manifest](https://img.shields.io/badge/Manifest-V3-34A853)](#)
-[![Version](https://img.shields.io/badge/version-1.6.0-7C3AED)](#)
+[![Version](https://img.shields.io/badge/version-1.8.0-7C3AED)](#)
 [![License](https://img.shields.io/badge/license-Free%20%2F%20Pro-F59E0B)](#)
 
 **IOC · MITRE ATT&CK · Playbooks · AI-наставник · DFIR · Incident Reporting**
 
 </div>
 
-# 🛡️ Belyaev Response — контрольные суммы релиза `v1.6.0`
+# 🛡️ Belyaev Response — контрольные суммы релиза `v1.8.0`
 
 > Проверяйте контрольные суммы после скачивания дистрибутива, чтобы убедиться в целостности и подлинности файла.
 
@@ -25,7 +25,7 @@
 | **Дата сборки** | `16 августа 2026` |
 | **Компонент** | Браузерное расширение для SOC-аналитиков |
 | **Архив** | `belyaev-response-v1.6.0.rar` |
-| **Размер** | `184 KB` |
+| **Размер** | `190 KB` |
 
 ---
 
@@ -33,12 +33,12 @@
 
 | Алгоритм | Хеш |
 |---|---|
-| SHA-1 | `b2cc49999119d06a0eecd11d994cf5599d27ce67` |
-| SHA-256 | `b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8` |
-| SHA-512 | `6d78ee2a76153a0799bf6b7c30f49649744ddaedbc1bec9793232e714e7dc971755e8042220eb894e0d93623c0cf40891e8aff1a34998ab8724d8309fe2421c9` |
+| SHA-1 | `9c6404cc70c5497ad3067f079a1a6ba7ab588f69` |
+| SHA-256 | `84d22a8fc3444657a35a882878dbd07c140742876e62494c51a7bb33f8adfbd2` |
+| SHA-512 | `5ce721e33ed0586d088709c2e2c90e635eb92cb1d9fcc8aa3b7f0489f9f2ae87379f599e070270125ecf09b84731f61c5bf3d0572b98a4b5dc7cf518bc34b3ff` |
 
 ## 🔐 Безопасность:
-<img width="1859" height="763" alt="Скриншот-20260816-012245" src="https://github.com/user-attachments/assets/634cd439-20c3-4a27-bd49-342a1fd8eb3f" />
+<img width="1837" height="737" alt="image" src="https://github.com/user-attachments/assets/27d6af22-6a15-4a02-a42d-308be948d340" />
 
 
 ---
@@ -54,7 +54,7 @@ sha256sum belyaev-response-v1.8.0.rar
 Сравните полученное значение с опубликированной контрольной суммой **SHA-256**:
 
 ```text
-b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8
+84d22a8fc3444657a35a882878dbd07c140742876e62494c51a7bb33f8adfbd2
 ```
 
 ### Windows PowerShell
@@ -66,7 +66,7 @@ Get-FileHash .\belyaev-response-v1.8.0.rar -Algorithm SHA256
 Ожидаемый результат:
 
 ```text
-SHA256  b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8
+SHA256  84d22a8fc3444657a35a882878dbd07c140742876e62494c51a7bb33f8adfbd2
 ```
 
 > ⚠️ Если рассчитанная сумма отличается хотя бы одним символом, **не устанавливайте и не используйте файл**. Скачайте архив повторно из официального источника.
