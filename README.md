@@ -21,21 +21,25 @@
 
 | Параметр | Значение |
 |---|---|
-| **Версия** | `v1.6.0` |
-| **Дата сборки** | `15 августа 2026` |
+| **Версия** | `v1.8.0` |
+| **Дата сборки** | `16 августа 2026` |
 | **Компонент** | Браузерное расширение для SOC-аналитиков |
 | **Архив** | `belyaev-response-v1.6.0.rar` |
-| **Размер** | `148 KB` |
+| **Размер** | `184 KB` |
 
 ---
 
 ## 🔐 Контрольные суммы
 
-| Алгоритм | Контрольная сумма |
+| Алгоритм | Хеш |
 |---|---|
-| **SHA-1** | `949c5cda7516e3fc477a3eee63904a0fc0a72d0a` |
-| **SHA-256** | `7cea4dbd6fed4edf6507888c66426a0e54d44c9e380686a4cfbee6110e974bae` |
-| **SHA-512** | `5943400ea6beea91af942bb93f7e52fee56c61886856baa039229605ba29498596aed7bb52ce0d9f92419e308ff9410f3a27bf9470acfd1f7fddbd7ff54c818e` |
+| SHA-1 | `b2cc49999119d06a0eecd11d994cf5599d27ce67` |
+| SHA-256 | `b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8` |
+| SHA-512 | `6d78ee2a76153a0799bf6b7c30f49649744ddaedbc1bec9793232e714e7dc971755e8042220eb894e0d93623c0cf40891e8aff1a34998ab8724d8309fe2421c9` |
+
+## 🔐 Безопасность:
+<img width="1859" height="763" alt="Скриншот-20260816-012245" src="https://github.com/user-attachments/assets/634cd439-20c3-4a27-bd49-342a1fd8eb3f" />
+
 
 ---
 
@@ -44,25 +48,25 @@
 ### Linux / macOS
 
 ```bash
-sha256sum belyaev-response-v1.6.0.rar
+sha256sum belyaev-response-v1.8.0.rar
 ```
 
 Сравните полученное значение с опубликированной контрольной суммой **SHA-256**:
 
 ```text
-7cea4dbd6fed4edf6507888c66426a0e54d44c9e380686a4cfbee6110e974bae
+b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8
 ```
 
 ### Windows PowerShell
 
 ```powershell
-Get-FileHash .\belyaev-response-v1.6.0.rar -Algorithm SHA256
+Get-FileHash .\belyaev-response-v1.8.0.rar -Algorithm SHA256
 ```
 
 Ожидаемый результат:
 
 ```text
-SHA256  7CEA4DBD6FED4EDF6507888C66426A0E54D44C9E380686A4CFBEE6110E974BAE
+SHA256  b675ebb30da7bcdd093562a8bb4d328645e3efa73908121a0c07e5c94e727aa8
 ```
 
 > ⚠️ Если рассчитанная сумма отличается хотя бы одним символом, **не устанавливайте и не используйте файл**. Скачайте архив повторно из официального источника.
