@@ -1,4 +1,9 @@
 🛡️ Belyaev Response
+## 🎯 Что это
+
+**Belyaev Response** — расширение для браузеров (Яндекс, Chrome, Edge),
+открывающееся над карточкой инцидента в SIEM и превращающее рабочее место
+аналитика в интегрированный центр расследований.
 ====================
 
 ### AI second brain для SOC-аналитика
@@ -10,41 +15,37 @@ _Браузерное расширение, которое помогает бы
 
 ---
 
-## 🔐 Контрольные суммы релиза `v1.8.0`
+## 🔐 Контрольные суммы релиза `v1.9.0`
 
 > Проверяйте контрольную сумму после скачивания, чтобы убедиться в целостности файла.
 
 | Параметр | Значение |
 |----------|----------|
-| **Версия** | `v1.8.0` |
-| **Дата сборки** | 16 августа 2026 |
-| **Архив** | `belyaev-response-v1.8.0.zip` |
-| **Размер** | 194 009 байт |
-| **SHA-256** | `84d22a8fc3444657a35a882878dbd07c140742876e62494c51a7bb33f8adfbd2` |
-
+| **Версия** | `v1.9.0` |
+| **Дата сборки** | 18 августа 2026 |
+| **Архив** | `belyaev-response-v1.9.0.zip` |
+| **Размер** | 221 КБ (227 130 байт) |
+| **SHA-1** | `23252af19e5781ee062fbb55dc6ae3ea048b3305` |
+| **SHA-256** | `f1673186d3a83a507b23eeebfb18c603ff61048e7dc47536f26a59e5127569b8` |
+| **SHA-512** | `9b6728e815f62bea7929c2da534149fa68665023ba1af0bf0026f25d939f566a1632e085bb7bec735b7ababfcc8f89ed924cdb6bfee271d4cca44d671cbe4aa1` |
 ### Проверка целостности
 
 ```bash
 # Linux / macOS
-sha256sum belyaev-response-v1.8.0.zip
+sha256sum belyaev-response-v1.9.0.zip
 ```
 ```powershell
 # Windows PowerShell
-Get-FileHash .\belyaev-response-v1.8.0.zip -Algorithm SHA256
+Get-FileHash .\belyaev-response-v1.9.0.zip -Algorithm SHA256
 ```
 
 ⚠️ Если контрольная сумма отличается — не устанавливайте файл.
 
 🔐Безопасность:
+<img width="1430" height="643" alt="image" src="https://github.com/user-attachments/assets/951c960e-25d6-4f96-917c-f4ed1a6f8f24" />
 
-<img width="1818" height="728" alt="image" src="https://github.com/user-attachments/assets/9f142b07-5eda-4548-b4d6-86fb0bb8776e" /><div align="center">
+
 ---
-
-## 🎯 Что это
-
-**Belyaev Response** — MVP-расширение для браузеров (Яндекс, Chrome, Edge),
-открывающееся над карточкой инцидента в SIEM и превращающее рабочее место
-аналитика в интегрированный центр расследований.
 
 Ключевые возможности:
 - Извлечение IOC
