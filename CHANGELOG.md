@@ -5,6 +5,54 @@
 API сервера лицензирования) требуют мажорной версии; новая функциональность —
 минорной; исправления багов — патч-версии.
 
+## [1.9.1] — 2026-08-18 — критичный патч: не работали сообщения content.js → background.js
+
+### Исправлено
+
+**`Uncaught TypeError: Cannot read properties of undefined (reading 'onMessage')` в content.js.**
+Content-script "осиротевал", если расширение обновлялось/перезагружалось, пока
+страница-SPA (например, `my.selectel.ru`) оставалась открытой — в этом состоянии
+`chrome.runtime` становится `undefined`, и регистрация `chrome.runtime.onMessage.addListener(...)`
+падала с необработанным исключением. Добавлена ранняя проверка `chrome.runtime.id`
+в начале content.js и безопасные обёртки `socCopilotSendMessage`/`socCopilotStorageGet`/
+`socCopilotStorageSet`/`socCopilotStorageRemove`, гасящие как этот сценарий, так и
+инвалидацию контекста уже после старта скрипта (`chrome.runtime.lastError`,
+синхронные исключения при обращении к `chrome.storage.local`).
+
+**Обогащение IOC, LLM-функции (Summary/Predict/Mentor), рассылка в Slack/Telegram/MAX/Teams/Jira,
+бейдж, кросс-табовая корреляция были фактически неработающими.** При первом проходе фикса выше
+обёртка `socCopilotSendMessage` по ошибке вызывала сама себя вместо `chrome.runtime.sendMessage`
+(бесконечная рекурсия, гасившаяся собственным `catch`) — весь канал content.js → background.js
+молча не отвечал. Обнаружено и устранено до релиза дополнительным аудитом.
+
+**Redaction (обезличивание перед отправкой в LLM) не покрывал общие секреты.**
+`utils/redaction.js` вырезал только SSH/AWS-ключи и JWT; пароли, bearer-токены и
+вендорские токены (Stripe `sk_`, GitHub `ghp_`, Slack `xox*`) могли уйти в LLM в
+открытом виде. Добавлены паттерны на `password/secret/token/api key: ...`, `Bearer ...`
+и токены популярных вендоров.
+
+**XSS defense-in-depth: `href` в панели.** В блоках техник MITRE, прогнозов, похожих
+инцидентов и ссылок DFIR-инструментов URL вставлялся в атрибут `href` без экранирования
+(`escapeAttr`), в отличие от остального текста. Сегодня не эксплуатируется (браузер сам
+percent-encode'ит спецсимволы в URL), но исправлено для консистентности с остальным кодом.
+
+**background.js: сообщения не проверяли отправителя.** `chrome.runtime.onMessage`
+теперь явно отклоняет сообщения не от своего расширения (`sender.id !== chrome.runtime.id`).
+Сегодня не эксплуатируется (`externally_connectable` не объявлен), это защита от регрессии.
+
+**Гонка при генерации Device ID.** `getOrCreateDeviceId()` в background.js мог
+сгенерировать разные UUID при параллельных вызовах на холодном старте service worker —
+теперь промис первого вызова кэшируется и переиспользуется.
+
+### Известные ограничения (не исправлено в этом релизе, не блокирует релиз)
+
+- `enrichCache` и `openIncidentTabs` в background.js хранятся только в памяти service
+  worker'а и сбрасываются при его выгрузке Chrome (~30 сек простоя) — TTL кэша обогащения
+  и кросс-табовая корреляция фактически ограничены временем жизни SW. Кандидат на перенос
+  в `chrome.storage.session` в одном из следующих релизов.
+- `migrateSecretsToEncrypted()`/`applyManagedPolicies()` могут в редких случаях выполниться
+  параллельно из `onInstalled` и `onStartup` — идемпотентно, но с лишними операциями.
+
 ## [1.9.0] — 2026-08-18 — критичный патч: CSP блокировала тестовый стенд SIEM; выбор логотипа
 
 ### Исправлено
