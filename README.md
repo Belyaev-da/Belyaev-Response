@@ -15,34 +15,37 @@ _Браузерное расширение, которое помогает бы
 
 ---
 
-## 🔐 Контрольные суммы релиза `v1.9.0`
+## 🔐 Контрольные суммы релиза `v1.9.1`
 
 > Проверяйте контрольную сумму после скачивания, чтобы убедиться в целостности файла.
 
 | Параметр | Значение |
 |----------|----------|
-| **Версия** | `v1.9.0` |
-| **Дата сборки** | 18 августа 2026 |
-| **Архив** | `belyaev-response-v1.9.0.zip` |
+| **Версия** | `v1.9.1` |
+| **Дата сборки** | 20 августа 2026 |
+| **Архив** | `belyaev-response-v1.9.1.zip` |
 | **Размер** | 221 КБ (227 130 байт) |
-| **SHA-1** | `23252af19e5781ee062fbb55dc6ae3ea048b3305` |
-| **SHA-256** | `f1673186d3a83a507b23eeebfb18c603ff61048e7dc47536f26a59e5127569b8` |
-| **SHA-512** | `9b6728e815f62bea7929c2da534149fa68665023ba1af0bf0026f25d939f566a1632e085bb7bec735b7ababfcc8f89ed924cdb6bfee271d4cca44d671cbe4aa1` |
+| **SHA-1** | `2fad0b547068b7008ae51fb4cfd106da774af2e8` |
+| **SHA-256** | `dd688d35b9ba9cc75577ea76ab82b3869b0932242b3dba0c1d8e05094c3e143b` |
+| **SHA-512** | `4a33b2f6020424c510461d6bf01f5eda6198b21d52e24abb6b568031839cfff97df1900d56c34e7feb5a30bcfe4909b9bc0812e687b85ac6a5c78530c723685e` |
 ### Проверка целостности
 
 ```bash
 # Linux / macOS
-sha256sum belyaev-response-v1.9.0.zip
+sha256sum belyaev-response-v1.9.1.zip
 ```
 ```powershell
 # Windows PowerShell
-Get-FileHash .\belyaev-response-v1.9.0.zip -Algorithm SHA256
+Get-FileHash .\belyaev-response-v1.9.1.zip -Algorithm SHA256
 ```
 
 ⚠️ Если контрольная сумма отличается — не устанавливайте файл.
 
 🔐Безопасность:
-<img width="1430" height="643" alt="image" src="https://github.com/user-attachments/assets/951c960e-25d6-4f96-917c-f4ed1a6f8f24" />
+<img width="1774" height="744" alt="image" src="https://github.com/user-attachments/assets/be2ae5da-5354-4252-aac0-2494e50b7965" />
+
+
+
 
 
 ---
