@@ -35,7 +35,7 @@ sha256sum belyaev-response-v1.9.1.zip
 ```
 ```powershell
 # Windows PowerShell
-Get-FileHash.\belyaev-response-v1.9.1.zip -Algorithm SHA256
+Get-FileHash .\belyaev-response-v1.9.1.zip -Algorithm SHA256
 ```
 
 ⚠️ Если контрольная сумма отличается - не устанавливайте файл.
