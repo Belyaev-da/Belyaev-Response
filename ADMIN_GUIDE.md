@@ -9,7 +9,7 @@
 ```json
 {
   "LicenseKey": "BLZR-XXXX-XXXX-XXXX-XXXX",
-  "CompanyNames": ["ООО Рога и Копыта", "rogakopyta.ru"],
+  "CompanyNames": ["Ваша организация", "yourorg.example"],
   "BurnoutCheckEnabled": true
 }
 ```
