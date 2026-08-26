@@ -9,7 +9,7 @@ Configure via the Windows registry (GPO) or the Google Admin Console:
 ```json
 {
   "LicenseKey": "BLZR-XXXX-XXXX-XXXX-XXXX",
-  "CompanyNames": ["Acme Corp", "acmecorp.example"],
+  "CompanyNames": ["Your Organization", "yourorg.example"],
   "BurnoutCheckEnabled": true
 }
 ```
