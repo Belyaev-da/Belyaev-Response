@@ -41,7 +41,8 @@ Get-FileHash .\belyaev-response-v1.9.3.zip -Algorithm SHA256
 ⚠️ Если контрольная сумма отличается - не устанавливайте файл.
 
 🔐Безопасность:
-<img width="1774" height="744" alt="image" src="https://github.com/user-attachments/assets/be2ae5da-5354-4252-aac0-2494e50b7965" />
+<img width="1813" height="554" alt="image" src="https://github.com/user-attachments/assets/4c8622ce-03f6-4032-a05c-d319201b669b" />
+
 
 ---
 
