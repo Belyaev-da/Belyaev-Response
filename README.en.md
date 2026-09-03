@@ -24,9 +24,9 @@ thoroughly - right inside the SIEM interface._
 | **Build date** | September 4, 2026 |
 | **Archive** | `belyaev-response-v1.9.3.zip` |
 | **Size** | 199 KB (203,659 bytes) |
-| **SHA-1** | `0d851366343c8f0b6ed338171549e3f8a4afcf83` |
-| **SHA-256** | `b17fa15c6443ceb0cc048d88fe28936f89fa8bf301351509d2b1ec6d5d7031a5` |
-| **SHA-512** | `dba21a5d048ac31ea12570a889d3d6f0523b0beff1007618eb209eacc0ca06e21aceeb1462f60c46f6dde6ecce41a597d098f888bbcf78aaf5fe1f5729e15bd6` |
+| **SHA-1** | `b7813eca331dfbc715a0291ad9a8dc412b7386b6` |
+| **SHA-256** | `8491f15fcb0ef3488a8f4585b0ea6d966fcedba84db49e6e89ec5560834960d1` |
+| **SHA-512** | `22c30172521aa13808ebbc12cf589be7700a5d863ddd8fddb917b46d04ff4ef5a6691616626f725b2e94d6aab13083bb87dc6745720834b6c20351df8310c84c` |
 ### Integrity check
 
 ```bash
