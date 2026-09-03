@@ -14,28 +14,28 @@ thoroughly - right inside the SIEM interface._
 
 ---
 
-## 🔐 Release `v1.9.1` checksums
+## 🔐 Release `v1.9.3` checksums
 
 > Verify the checksum after downloading to confirm the file's integrity.
 
 | Field | Value |
 |----------|----------|
-| **Version** | `v1.9.1` |
-| **Build date** | August 20, 2026 |
-| **Archive** | `belyaev-response-v1.9.1.zip` |
-| **Size** | 221 KB (227,130 bytes) |
-| **SHA-1** | `2fad0b547068b7008ae51fb4cfd106da774af2e8` |
-| **SHA-256** | `dd688d35b9ba9cc75577ea76ab82b3869b0932242b3dba0c1d8e05094c3e143b` |
-| **SHA-512** | `4a33b2f6020424c510461d6bf01f5eda6198b21d52e24abb6b568031839cfff97df1900d56c34e7feb5a30bcfe4909b9bc0812e687b85ac6a5c78530c723685e` |
+| **Version** | `v1.9.3` |
+| **Build date** | September 4, 2026 |
+| **Archive** | `belyaev-response-v1.9.3.zip` |
+| **Size** | 199 KB (203,659 bytes) |
+| **SHA-1** | `0d851366343c8f0b6ed338171549e3f8a4afcf83` |
+| **SHA-256** | `b17fa15c6443ceb0cc048d88fe28936f89fa8bf301351509d2b1ec6d5d7031a5` |
+| **SHA-512** | `dba21a5d048ac31ea12570a889d3d6f0523b0beff1007618eb209eacc0ca06e21aceeb1462f60c46f6dde6ecce41a597d098f888bbcf78aaf5fe1f5729e15bd6` |
 ### Integrity check
 
 ```bash
 # Linux / macOS
-sha256sum belyaev-response-v1.9.1.zip
+sha256sum belyaev-response-v1.9.3.zip
 ```
 ```powershell
 # Windows PowerShell
-Get-FileHash .\belyaev-response-v1.9.1.zip -Algorithm SHA256
+Get-FileHash .\belyaev-response-v1.9.3.zip -Algorithm SHA256
 ```
 
 ⚠️ If the checksum doesn't match, do not install the file.
@@ -136,26 +136,17 @@ organization's infrastructure.
 
 ---
 
-## 🆕 What's new in v1.8.0
+## 🆕 What's new in v1.9.3
 
-- Platform adapters (MP SIEM/RuSIEM/BI.ZONE) are now **off by default** -
- the extension no longer activates "out of the box" on pages that
- resemble an incident card.
-- The other SIEMs (Security Vision, KUMA, SearchInform, R-Vision, Splunk,
- ArcSight) are now combined into one "Universal" adapter instead of six
- separate ones.
-- A global extension switch - a toggle in the popup that instantly
- removes the panel from all open tabs without reloading pages.
-- Unobtrusive contextual hints ("where to go, what to look at") on key
- panel tabs - shown once each, with a global toggle in settings.
-- A built-in test bench (test-siem.html) with synthetic incidents - for
- testing the plugin without connecting to a real SIEM.
-- The panel was widened (380→440px), fixing clipped mentor buttons.
-- Fixed Manifest V3 CSP restrictions (inline scripts were being blocked
- by the browser on chrome-extension:// pages) and a leak in the message
- handler.
+- **SIEM test stand**: the panel opens again on the bundled `test-siem.html`
+ stand (the BR button used to be missing); switching scenarios refreshes the
+ panel contents.
+- Resilient `content.js` ↔ `background.js` messaging after an extension
+ update/restart (1.9.1–1.9.2).
+- Client-side hardening (HTML-export escaping, cryptographically strong
+ identifiers, user-input length limits).
 
-Full changelog - `CHANGELOG.md` in the archive.
+Full changelog - `CHANGELOG.md`.
 
 ---
 
@@ -225,7 +216,7 @@ heuristic selectors by default.
 
 ### Developer mode
 
-1. Download and unpack `belyaev-response-v1.8.0.zip`
+1. Download and unpack `belyaev-response-v1.9.3.zip`
 2. Open `chrome://extensions` (or `edge://extensions`,
  `browser://extensions` in Yandex Browser)
 3. Turn on **Developer mode**
@@ -277,7 +268,7 @@ manifest.json                  # Manifest V3
 background.js                  # TI/LLM, tabs, context menu, webhooks
 adapters.js                    # MP SIEM / RuSIEM / BI.ZONE / Universal
 content.js                     # Parsing, side panel, picker, highlighting
-test-siem.html + test-siem-data.js   # built-in test bench
+test-siem.html + test-siem.js   # built-in test bench
 
 utils/
 ├── ioc-extractor.js           # Regex-based extraction
